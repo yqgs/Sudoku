@@ -9,7 +9,7 @@ type Cell struct {
 	y int
 }
 
-func CreateGrid() {
+func CreateGrid() map[Cell][]Cell {
 	Grid := make(map[Cell][]Cell, default_size*default_size)
 
 	for i := 0; i < default_size; i++ {
@@ -50,4 +50,5 @@ func CreateGrid() {
 			fmt.Println("---------------------------------")
 		}
 	}
+	return Grid
 }
