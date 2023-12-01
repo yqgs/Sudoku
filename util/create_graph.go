@@ -52,3 +52,14 @@ func CreateGrid() map[Cell][]Cell {
 	}
 	return Grid
 }
+
+func CreateGridValues() map[Cell]int {
+	Values := make(map[Cell]int, default_size*default_size)
+	for i := 0; i < default_size; i++ {
+		for j := 0; j < default_size; j++ {
+			cell := Cell{x: i, y: j}
+			Values[cell] = 0
+		}
+	}
+	return Values
+}
